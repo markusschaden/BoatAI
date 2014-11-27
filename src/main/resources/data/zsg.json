@@ -1,0 +1,451 @@
+{
+	"3": 
+	[
+		{
+			"latitude": 47.34720855000001,
+			"longitude": 8.536402916666665,
+			"speed": "0",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:51:45",
+			"active": false,
+			"kmh": "0"
+		}
+	],
+
+	"4": 
+	[
+		{
+			"latitude": 47.347972366666674,
+			"longitude": 8.535485033333334,
+			"speed": "0",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:51:58",
+			"active": false,
+			"kmh": "0"
+		}
+	],
+
+	"6": 
+	[
+		{
+			"latitude": 47.34761461666667,
+			"longitude": 8.535511216666666,
+			"speed": "0",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:51:28",
+			"active": false,
+			"kmh": "0"
+		}
+	],
+
+	"8": 
+	[
+		{
+			"latitude": 47.34701565,
+			"longitude": 8.536405116666666,
+			"speed": "1.4",
+			"delay": 0.0,
+			"date": "18. November 2014",
+			"time": "14:17:26",
+			"active": false,
+			"kmh": "2.59"
+		},
+
+		{
+			"latitude": 47.347044450000006,
+			"longitude": 8.536620683333332,
+			"speed": "2.7",
+			"delay": 0.0,
+			"date": "18. November 2014",
+			"time": "14:17:10",
+			"active": false,
+			"kmh": "5"
+		},
+
+		{
+			"latitude": 47.34707453333334,
+			"longitude": 8.53683345,
+			"speed": "3",
+			"delay": 0.0,
+			"date": "18. November 2014",
+			"time": "14:16:58",
+			"active": false,
+			"kmh": "5.56"
+		},
+
+		{
+			"latitude": 47.34709506666667,
+			"longitude": 8.537081766666669,
+			"speed": "3.3",
+			"delay": 0.0,
+			"date": "18. November 2014",
+			"time": "14:16:46",
+			"active": false,
+			"kmh": "6.11"
+		},
+
+		{
+			"latitude": 47.3471193,
+			"longitude": 8.537279183333332,
+			"speed": "3.1",
+			"delay": 0.0,
+			"date": "18. November 2014",
+			"time": "14:16:37",
+			"active": false,
+			"kmh": "5.74"
+		}
+	],
+
+	"10": 
+	[
+		{
+			"latitude": 47.29848066666666,
+			"longitude": 8.580846583333333,
+			"speed": "12.4",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:53:16",
+			"active": true,
+			"kmh": "22.96"
+		},
+
+		{
+			"latitude": 47.29839018333334,
+			"longitude": 8.580644316666667,
+			"speed": "12.4",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:53:13",
+			"active": true,
+			"kmh": "22.96"
+		},
+
+		{
+			"latitude": 47.29831955,
+			"longitude": 8.580419399999998,
+			"speed": "12.6",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:53:10",
+			"active": true,
+			"kmh": "23.34"
+		},
+
+		{
+			"latitude": 47.29821771666667,
+			"longitude": 8.580182600000002,
+			"speed": "11.9",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:53:07",
+			"active": true,
+			"kmh": "22.04"
+		},
+
+		{
+			"latitude": 47.29812206666667,
+			"longitude": 8.579983166666667,
+			"speed": "12.6",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:53:04",
+			"active": true,
+			"kmh": "23.34"
+		},
+
+		{
+			"latitude": 47.29805976666667,
+			"longitude": 8.579754316666667,
+			"speed": "11.5",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:53:01",
+			"active": true,
+			"kmh": "21.3"
+		},
+
+		{
+			"latitude": 47.29798901666666,
+			"longitude": 8.57955605,
+			"speed": "13.2",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:52:58",
+			"active": true,
+			"kmh": "24.45"
+		},
+
+		{
+			"latitude": 47.29787595,
+			"longitude": 8.579321083333335,
+			"speed": "12.5",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:52:55",
+			"active": true,
+			"kmh": "23.15"
+		},
+
+		{
+			"latitude": 47.29779204999999,
+			"longitude": 8.5790797,
+			"speed": "12.1",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:52:52",
+			"active": true,
+			"kmh": "22.41"
+		},
+
+		{
+			"latitude": 47.29773919999999,
+			"longitude": 8.578828833333334,
+			"speed": "12.3",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:52:49",
+			"active": true,
+			"kmh": "22.78"
+		},
+
+		{
+			"latitude": 47.29766336666667,
+			"longitude": 8.578627966666666,
+			"speed": "12.2",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:52:46",
+			"active": true,
+			"kmh": "22.59"
+		},
+
+		{
+			"latitude": 47.29755491666666,
+			"longitude": 8.578430383333334,
+			"speed": "13.2",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:52:43",
+			"active": true,
+			"kmh": "24.45"
+		},
+
+		{
+			"latitude": 47.297465849999995,
+			"longitude": 8.578163866666669,
+			"speed": "12.2",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:52:40",
+			"active": true,
+			"kmh": "22.59"
+		},
+
+		{
+			"latitude": 47.29738788333334,
+			"longitude": 8.577961366666667,
+			"speed": "13.2",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:52:37",
+			"active": true,
+			"kmh": "24.45"
+		},
+
+		{
+			"latitude": 47.29732378333333,
+			"longitude": 8.577700333333334,
+			"speed": "11.9",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:52:34",
+			"active": true,
+			"kmh": "22.04"
+		}
+	],
+
+	"11": 
+	[
+		{
+			"latitude": 47.34743945,
+			"longitude": 8.535510383333332,
+			"speed": "0",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:51:39",
+			"active": false,
+			"kmh": "0"
+		}
+	],
+
+	"15": 
+	[
+		{
+			"latitude": 47.22989456666666,
+			"longitude": 8.682828533333332,
+			"speed": "12.4",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:53:18",
+			"active": true,
+			"kmh": "22.96"
+		},
+
+		{
+			"latitude": 47.229924733333334,
+			"longitude": 8.683064266666666,
+			"speed": "12.8",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:53:15",
+			"active": true,
+			"kmh": "23.71"
+		},
+
+		{
+			"latitude": 47.22997898333333,
+			"longitude": 8.683312666666666,
+			"speed": "14.2",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:53:12",
+			"active": true,
+			"kmh": "26.3"
+		},
+
+		{
+			"latitude": 47.23003443333334,
+			"longitude": 8.6836018,
+			"speed": "12.2",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:53:09",
+			"active": true,
+			"kmh": "22.59"
+		},
+
+		{
+			"latitude": 47.230080150000006,
+			"longitude": 8.683836533333334,
+			"speed": "12.5",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:53:06",
+			"active": true,
+			"kmh": "23.15"
+		},
+
+		{
+			"latitude": 47.230114916666665,
+			"longitude": 8.684075233333333,
+			"speed": "11.9",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:53:03",
+			"active": true,
+			"kmh": "22.04"
+		},
+
+		{
+			"latitude": 47.23016436666667,
+			"longitude": 8.684280916666667,
+			"speed": "13.9",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:53:00",
+			"active": true,
+			"kmh": "25.74"
+		},
+
+		{
+			"latitude": 47.23022191666667,
+			"longitude": 8.684563866666666,
+			"speed": "12.6",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:52:57",
+			"active": true,
+			"kmh": "23.34"
+		},
+
+		{
+			"latitude": 47.23027391666666,
+			"longitude": 8.684802966666668,
+			"speed": "12.4",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:52:54",
+			"active": true,
+			"kmh": "22.96"
+		},
+
+		{
+			"latitude": 47.23029883333334,
+			"longitude": 8.6850559,
+			"speed": "12.5",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:52:51",
+			"active": true,
+			"kmh": "23.15"
+		},
+
+		{
+			"latitude": 47.23034571666667,
+			"longitude": 8.68532045,
+			"speed": "12.7",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:52:48",
+			"active": true,
+			"kmh": "23.52"
+		},
+
+		{
+			"latitude": 47.23037179999999,
+			"longitude": 8.685562116666668,
+			"speed": "12.4",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:52:45",
+			"active": true,
+			"kmh": "22.96"
+		},
+
+		{
+			"latitude": 47.23042848333333,
+			"longitude": 8.685809299999999,
+			"speed": "12.5",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:52:42",
+			"active": true,
+			"kmh": "23.15"
+		},
+
+		{
+			"latitude": 47.23047546666666,
+			"longitude": 8.686064316666668,
+			"speed": "12.2",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:52:39",
+			"active": true,
+			"kmh": "22.59"
+		},
+
+		{
+			"latitude": 47.23051780000001,
+			"longitude": 8.686295016666666,
+			"speed": "13.1",
+			"delay": 0.0,
+			"date": "27. November 2014",
+			"time": "11:52:36",
+			"active": true,
+			"kmh": "24.26"
+		}
+	]
+}
