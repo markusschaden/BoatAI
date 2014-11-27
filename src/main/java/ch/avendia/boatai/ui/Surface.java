@@ -115,6 +115,9 @@ public class Surface extends JPanel {
 				}
 			}
 
+			g.setColor(Color.white);
+			g2d.fillOval(map.getLocation().getCurrentX() * map.getResolution(), map.getLocation().getCurrentY() * map.getResolution(), map.getResolution(), map.getResolution());
+
 		} else if (points != null) {
 			mapResizer.resize(this.getSize());
 
@@ -192,6 +195,7 @@ public class Surface extends JPanel {
 
 		System.out.println("x:" + x + ", y: " + y);
 		if (map.getTile(x, y) instanceof Lake) {
+			map.setLocation(x, y);
 			selectedx = x;
 			selectedy = y;
 			lastFindX = -1;

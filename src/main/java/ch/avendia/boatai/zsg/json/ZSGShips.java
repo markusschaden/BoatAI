@@ -15,7 +15,7 @@ public class ZSGShips extends HashMap<Integer, List<ZSGShip>> {
 		for (List<ZSGShip> list : values()) {
 			for (ZSGShip ship : list) {
 				zsgShips.add(ship);
-				break; // only the first
+				break; // only the first ship. avoid multiple entries on the map
 			}
 		}
 		return zsgShips;
@@ -23,6 +23,6 @@ public class ZSGShips extends HashMap<Integer, List<ZSGShip>> {
 
 	public Collection<ZSGShip> getActiveShips() {
 
-		return getShips().stream().filter(s -> s.getActive()).filter(s -> !s.getSpeed().equals("0")).collect(Collectors.toList());
+		return getShips().stream().filter(s -> s.getActive()).collect(Collectors.toList());
 	}
 }

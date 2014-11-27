@@ -16,6 +16,7 @@ public class TileMap implements TileBasedMap {
 	private int width, height;
 
 	private Transform transform;
+	private Location location;
 
 	public TileMap(int width, int height) {
 		this.width = width;
@@ -23,6 +24,7 @@ public class TileMap implements TileBasedMap {
 		tiles = new Tile[width][height];
 		visited = new boolean[width][height];
 		units = new Unit[width][height];
+		location = new Location();
 	}
 
 	public void setTile(int x, int y, Tile tile) {
@@ -107,6 +109,19 @@ public class TileMap implements TileBasedMap {
 
 	public Unit getUnit(int x, int y) {
 		return units[x][y];
+	}
+
+	public void setLocation(int x, int y) {
+		location.setCurrentX(x);
+		location.setCurrentY(y);
+	}
+
+	public Location getLocation() {
+		return location;
+	}
+
+	public void setLocation(Location location) {
+		this.location = location;
 	}
 
 }
