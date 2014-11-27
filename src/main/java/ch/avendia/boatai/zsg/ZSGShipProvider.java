@@ -20,7 +20,7 @@ public class ZSGShipProvider {
 
 		ZSGShips ships = parser.parse(reader);
 
-		for (ZSGShip ship : ships.getShips()) {
+		for (ZSGShip ship : ships.getActiveShips()) {
 			System.out.println(ship.getLatitude() + " , " + ship.getLongitude());
 		}
 
@@ -30,7 +30,7 @@ public class ZSGShipProvider {
 	private String getJson() {
 
 		ZSGAPI api = new ZSGAPI();
-		return api.getJson();
+		return api.getJsonFile();
 	}
 
 }

@@ -19,6 +19,8 @@ import ch.avendia.boatai.map.finder.PathFinder;
 import ch.avendia.boatai.map.finder.UnitMover;
 import ch.avendia.boatai.map.tiles.Lake;
 import ch.avendia.boatai.ui.logic.RawLakeMapResizer;
+import ch.avendia.boatai.zsg.ZSGShipProvider;
+import ch.avendia.boatai.zsg.json.ZSGShip;
 
 public class Surface extends JPanel {
 
@@ -36,6 +38,7 @@ public class Surface extends JPanel {
 	private int lastFindX = -1;
 	/** The y coordinate of the target of the last path we searched for - used to cache and prevent constantly re-searching */
 	private int lastFindY = -1;
+	private Collection<ZSGShip> ships;
 
 	public Surface(Collection<Point.Double> points) {
 		this.points = points;
@@ -59,6 +62,9 @@ public class Surface extends JPanel {
 				handleMouseMoved(e.getX(), e.getY());
 			}
 		});
+
+		ZSGShipProvider provider = new ZSGShipProvider();
+		ships = provider.getShips();
 
 	}
 
@@ -106,9 +112,20 @@ public class Surface extends JPanel {
 					lastPoint = point;
 				}
 			}
-
 		}
 
+		if (ships != null) {
+			for (ZSGShip ship : ships) {
+				Point.Double coord = CoordinateConverter.getInstance().convertToSwiss(new Point.Double(ship.getLongitude(), ship.getLatitude()));
+				// System.out.println("Swiss x: " + coord.x + " y: " + coord.y);
+				int x = (int) ((coord.x - map.getTransform().getTranslateX()) * map.getTransform().getScale());
+				int y = (int) ((coord.y - map.getTransform().getTranslateY()) * map.getTransform().getScale());
+				g.setColor(Color.orange);
+				g2d.fillOval(x, y, 4, 4);
+				System.out.println("Ship: x: " + x + " , y: " + y);
+			}
+			System.out.println("Ships: " + ships.size());
+		}
 	}
 
 	@Override

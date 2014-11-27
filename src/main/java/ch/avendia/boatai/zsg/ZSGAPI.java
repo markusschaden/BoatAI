@@ -1,6 +1,7 @@
 package ch.avendia.boatai.zsg;
 
 import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -52,5 +53,21 @@ public class ZSGAPI {
 
 		return null;
 
+	}
+
+	public String getJsonFile() {
+		try {
+			BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/data/zsg.json"));
+			String line = reader.readLine();
+			StringBuffer sb = new StringBuffer();
+			while (line != null) {
+				sb.append(line);
+				line = reader.readLine();
+			}
+			return sb.toString();
+		} catch (Exception e) {
+
+		}
+		return null;
 	}
 }

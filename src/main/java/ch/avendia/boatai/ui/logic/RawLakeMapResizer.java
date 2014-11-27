@@ -10,8 +10,8 @@ import ch.avendia.boatai.map.Transform;
 public class RawLakeMapResizer {
 
 	Collection<Point.Double> points;
-	int correctionX = 0;// 4100;
-	int correctionY = 0;// 800;
+	double correctionX = 0;
+	double correctionY = 0;
 	Dimension size;
 
 	public RawLakeMapResizer(Collection<Point.Double> points) {
@@ -68,11 +68,11 @@ public class RawLakeMapResizer {
 	private double[] calcCorrection() {
 		Optional<Double> minX = points.stream().map(p -> p.x).min(Double::compare);
 
-		correctionX = (int) (minX.get().doubleValue());
+		correctionX = minX.get().doubleValue();
 
 		Optional<Double> minY = points.stream().map(p -> p.y).min(Double::compare);
 
-		correctionY = (int) minY.get().doubleValue();
+		correctionY = minY.get().doubleValue();
 
 		return new double[] { minX.get().doubleValue(), minY.get().doubleValue() };
 	}

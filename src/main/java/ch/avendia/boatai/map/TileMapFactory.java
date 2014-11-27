@@ -55,7 +55,7 @@ public class TileMapFactory {
 		}
 		// swap x Axis
 		for (int i = 0; i < polygon.ypoints.length; i++) {
-			polygon.ypoints[i] = MAX_Y - polygon.ypoints[i];
+			// polygon.ypoints[i] = MAX_Y - polygon.ypoints[i];
 		}
 
 		System.out.println("Map: x:" + distX + " , y:" + distY);
