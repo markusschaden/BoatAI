@@ -5,11 +5,15 @@ import java.awt.Point;
 import java.awt.Polygon;
 import java.util.Collection;
 
+import ch.avendia.boatai.map.coordinates.CoordinateConverter;
 import ch.avendia.boatai.map.tiles.Ground;
 import ch.avendia.boatai.map.tiles.Lake;
+import ch.avendia.boatai.map.units.Ship;
 import ch.avendia.boatai.rawlake.LakeFactory;
 import ch.avendia.boatai.rawlake.RawLake;
 import ch.avendia.boatai.ui.logic.RawLakeMapResizer;
+import ch.avendia.boatai.zsg.ZSGShipProvider;
+import ch.avendia.boatai.zsg.json.ZSGShip;
 
 public class TileMapFactory {
 
@@ -75,6 +79,21 @@ public class TileMapFactory {
 					tileMap.setTile(x, y, new Ground());
 				}
 			}
+		}
+
+		ZSGShipProvider provider = new ZSGShipProvider();
+		Collection<ZSGShip> ships = provider.getShips();
+
+		for (ZSGShip ship : ships) {
+			Point.Double coord = CoordinateConverter.getInstance().convertToSwiss(new Point.Double(ship.getLongitude(), ship.getLatitude()));
+			int x = (int) ((coord.x - tileMap.getTransform().getTranslateX()) * tileMap.getTransform().getScale());
+			int y = (int) ((coord.y - tileMap.getTransform().getTranslateY()) * tileMap.getTransform().getScale());
+			for (int i = -1; i < 2; i++) { // bigger place
+				for (int j = -1; j < 2; j++) {
+					tileMap.setUnit((int) Math.ceil(x / tileMap.getResolution()) + i, (int) Math.ceil(y / tileMap.getResolution()) + j, new Ship());
+				}
+			}
+
 		}
 
 		return tileMap;
