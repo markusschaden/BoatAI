@@ -4,10 +4,13 @@ import ch.avendia.boatai.map.finder.Mover;
 import ch.avendia.boatai.map.finder.TileBasedMap;
 import ch.avendia.boatai.map.tiles.Lake;
 import ch.avendia.boatai.map.tiles.Tile;
+import ch.avendia.boatai.map.units.Ship;
+import ch.avendia.boatai.map.units.Unit;
 
 public class TileMap implements TileBasedMap {
 
 	private Tile[][] tiles;
+	private Unit[][] units;
 	private boolean[][] visited;
 	private int resolution; // Defines how many pixel are grouped together
 	private int width, height;
@@ -19,6 +22,7 @@ public class TileMap implements TileBasedMap {
 		this.height = height;
 		tiles = new Tile[width][height];
 		visited = new boolean[width][height];
+		units = new Unit[width][height];
 	}
 
 	public void setTile(int x, int y, Tile tile) {
@@ -51,6 +55,11 @@ public class TileMap implements TileBasedMap {
 	 * @see TileBasedMap#blocked(Mover, int, int)
 	 */
 	public boolean blocked(Mover mover, int x, int y) {
+		Unit unit = units[x][y];
+		if (unit instanceof Ship) {
+			return true;
+		}
+
 		return !(tiles[x][y] instanceof Lake);
 	}
 
@@ -72,6 +81,10 @@ public class TileMap implements TileBasedMap {
 		return visited[x][y];
 	}
 
+	public void setUnit(int x, int y, Unit unit) {
+		units[x][y] = unit;
+	}
+
 	public Tile getTile(int x, int y) {
 		return tiles[x][y];
 	}
@@ -91,4 +104,9 @@ public class TileMap implements TileBasedMap {
 	public void setTransform(Transform transform) {
 		this.transform = transform;
 	}
+
+	public Unit getUnit(int x, int y) {
+		return units[x][y];
+	}
+
 }

@@ -18,6 +18,7 @@ import ch.avendia.boatai.map.finder.Path;
 import ch.avendia.boatai.map.finder.PathFinder;
 import ch.avendia.boatai.map.finder.UnitMover;
 import ch.avendia.boatai.map.tiles.Lake;
+import ch.avendia.boatai.map.units.Ship;
 import ch.avendia.boatai.ui.logic.RawLakeMapResizer;
 import ch.avendia.boatai.zsg.ZSGShipProvider;
 import ch.avendia.boatai.zsg.json.ZSGShip;
@@ -66,6 +67,18 @@ public class Surface extends JPanel {
 		ZSGShipProvider provider = new ZSGShipProvider();
 		ships = provider.getShips();
 
+		for (ZSGShip ship : ships) {
+			Point.Double coord = CoordinateConverter.getInstance().convertToSwiss(new Point.Double(ship.getLongitude(), ship.getLatitude()));
+			int x = (int) ((coord.x - map.getTransform().getTranslateX()) * map.getTransform().getScale());
+			int y = (int) ((coord.y - map.getTransform().getTranslateY()) * map.getTransform().getScale());
+			for (int i = -1; i < 2; i++) {
+				for (int j = -1; j < 2; j++) {
+					map.setUnit((int) Math.ceil(x / map.getResolution()) + i, (int) Math.ceil(y / map.getResolution()) + j, new Ship());
+				}
+			}
+
+		}
+
 	}
 
 	private void doDrawing(Graphics g) {
@@ -83,6 +96,11 @@ public class Surface extends JPanel {
 						g2d.setColor(Color.gray);
 					}
 					g2d.fillRect(i * map.getResolution(), j * map.getResolution(), map.getResolution(), map.getResolution());
+
+					g.setColor(Color.orange);
+					if (map.getUnit(i, j) instanceof Ship) {
+						g2d.fillOval(i * map.getResolution(), j * map.getResolution(), map.getResolution(), map.getResolution());
+					}
 
 					g2d.setColor(Color.black);
 					// g2d.drawRect(i * map.getResolution(), j * map.getResolution(), map.getResolution(), map.getResolution());
@@ -114,18 +132,9 @@ public class Surface extends JPanel {
 			}
 		}
 
-		if (ships != null) {
-			for (ZSGShip ship : ships) {
-				Point.Double coord = CoordinateConverter.getInstance().convertToSwiss(new Point.Double(ship.getLongitude(), ship.getLatitude()));
-				// System.out.println("Swiss x: " + coord.x + " y: " + coord.y);
-				int x = (int) ((coord.x - map.getTransform().getTranslateX()) * map.getTransform().getScale());
-				int y = (int) ((coord.y - map.getTransform().getTranslateY()) * map.getTransform().getScale());
-				g.setColor(Color.orange);
-				g2d.fillOval(x, y, 4, 4);
-				System.out.println("Ship: x: " + x + " , y: " + y);
-			}
-			System.out.println("Ships: " + ships.size());
-		}
+		/*
+		 * if (ships != null) { for (ZSGShip ship : ships) { Point.Double coord = CoordinateConverter.getInstance().convertToSwiss(new Point.Double(ship.getLongitude(), ship.getLatitude())); // System.out.println("Swiss x: " + coord.x + " y: " + coord.y); int x = (int) ((coord.x - map.getTransform().getTranslateX()) * map.getTransform().getScale()); int y = (int) ((coord.y - map.getTransform().getTranslateY()) * map.getTransform().getScale()); g.setColor(Color.orange); g2d.fillOval(x, y, 4, 4); // System.out.println("Ship: x: " + x + " , y: " + y); } System.out.println("Ships: " + ships.size()); }
+		 */
 	}
 
 	@Override
